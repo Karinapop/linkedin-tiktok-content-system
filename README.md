@@ -15,6 +15,15 @@ It is built around three things that make it actually useful instead of generic:
 
 It routes each idea to the right platform(s), keeps two independently-ranked priority lists, and refreshes a daily trends section from ~200 scraped posts across LinkedIn, X, and TikTok.
 
+## How I use it (the daily loop)
+
+1. **Every morning at 7am**, it sweeps the latest ~200 posts across my LinkedIn, X, and TikTok feeds, spots emerging patterns, and updates the Trend Report in my content note.
+2. It uses those trends to **reprioritize my content backlog** based on what's likely to perform that day.
+3. It goes through my **inbox of new ideas** and sorts each one into LinkedIn, TikTok, or both.
+4. It then **drafts every new idea in my voice** (from a voice profile built off my past posts), organized in the note by platform and drafting stage. For TikTok it hands me **3 to 5 shootable versions** per idea, each with script, caption, and video format.
+5. I **manually invoke the skill with my raw thoughts** on a draft and let it finalize them into a strong post. The moment a post is locked, it **drafts straight into my LinkedIn**, tags and @mentions included. I add an image, do one last read, and hit post.
+6. It is **self-cleaning**: published drafts are cleared every morning, and performance metrics from every live post are pulled back into the note.
+
 ## Before you start: everything you need to set up
 
 This system drives **your** real accounts and a **local** Apple Note, so it needs you to be logged in everywhere, to install one browser extension, and to grant a couple of macOS permissions. Set all of this up once. Nothing here costs money beyond your normal Claude subscription.
