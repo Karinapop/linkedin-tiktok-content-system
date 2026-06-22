@@ -22,11 +22,13 @@ description: >-
   or "bake out" content ideas into posts, turn a list of ideas into LinkedIn + TikTok
   content, draft posts with a viral or trending hook, build a content batch, save a batch
   of LinkedIn posts as drafts, sync or reorganize your content note, reprioritize your
-  content, or brainstorm-to-draft in your voice. Trigger phrases: "turn my ideas into
-  posts", "bake out these content ideas", "make LinkedIn and TikTok content from this idea",
-  "draft posts for these ideas", "I have content ideas", "draft these posts in LinkedIn",
-  "flesh out this idea into content", "make me a LinkedIn post and TikTok script", "sync my
-  content note", "reprioritize my content ideas", "what should I post next".
+  content, or brainstorm-to-draft in your voice. Also runs a guided first-time setup wizard
+  on request or on a detected fresh install. Trigger phrases: "turn my ideas into posts",
+  "bake out these content ideas", "make LinkedIn and TikTok content from this idea", "draft
+  posts for these ideas", "I have content ideas", "draft these posts in LinkedIn", "flesh
+  out this idea into content", "make me a LinkedIn post and TikTok script", "sync my content
+  note", "reprioritize my content ideas", "what should I post next", "set up the content
+  system", "set up this skill", "help me get started".
 ---
 
 # Idea to LinkedIn + TikTok
@@ -37,13 +39,18 @@ The whole reason this skill exists: a raw idea ("AI is changing search") is not 
 
 ## First-time setup (do this once)
 
-This skill is built to sound like *you*, work from *your* content note, and post to *your* accounts. Before the first real run, walk through [SETUP.md](SETUP.md) once to personalize three things:
+This skill is built to sound like *you*, work from *your* content note, and post to *your* accounts. There is a **guided setup wizard**: when the user says "set up the content system" / "set up this skill" / "help me get started," or when you detect a first run, run [references/setup-wizard.md](references/setup-wizard.md) and walk them through it one step at a time. [SETUP.md](SETUP.md) is the same flow written for a human to read.
 
+**Detect a first run** and offer the wizard before doing content work if either is true:
+- `references/voice-profile.md` still contains `<...>` template placeholders, or
+- `references/apple-notes-sync.md` still contains the `<YOUR_NOTE_ID>` placeholder.
+
+In that case, pause and offer: "Looks like a fresh install. Want me to walk you through a ~5 minute setup first? (Or I can do a one-off draft now and set up later.)" Don't silently draft in a generic voice or fail to find the note.
+
+The wizard personalizes three core things (plus pairing/logins/permissions):
 1. **Build your voice profile.** Connect your LinkedIn (browser) so the skill can read your recent original posts and generate `references/voice-profile.md` from how you actually write. This is what makes drafts sound like you instead of like "a LinkedIn thought leader." See `references/voice-profile-bootstrap.md`.
 2. **Point it at your content note.** Set your Apple Note ID in `references/apple-notes-sync.md` (the skill can help you find it). This note becomes the source of truth.
 3. **Confirm your handles.** Your LinkedIn profile and (optionally) your TikTok handle, used for scraping trends and tracking your published posts.
-
-If `references/voice-profile.md` still contains template placeholders, run the bootstrap first; drafting in a generic voice is the most common failure.
 
 ## What it produces per idea
 

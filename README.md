@@ -84,7 +84,9 @@ The core flow does **not** need Accessibility or Screen Recording permissions. T
 
 ## First-time setup (~25 to 40 min)
 
-See **[SETUP.md](SETUP.md)** for the full walkthrough. In short:
+**Easiest path: let Claude guide you.** Once the skill is installed, just say **"set up the content system"** and Claude runs a guided wizard that checks each prerequisite, builds your voice profile, wires up your note, and ends with a dry run, one step at a time. It also offers this automatically the first time it notices the skill isn't configured yet.
+
+Prefer to do it yourself? See **[SETUP.md](SETUP.md)** for the full walkthrough. In short:
 
 1. **Install + connect the Claude for Chrome extension and log into LinkedIn, TikTok, and X** in that Chrome profile (~10 min, mostly logging in).
 2. **Build your voice profile** (~5 to 10 min). Ask Claude: *"build my voice profile from my LinkedIn."* It connects to your LinkedIn in Chrome, reads ~15 of your recent posts, and fills in `references/voice-profile.md`. (Or paste 8 to 12 of your own posts into chat.)
@@ -111,6 +113,7 @@ The skill shows you drafts in chat first, you pick and iterate, and on "lock" it
 | `SKILL.md` | The main skill: workflow, drafting rules, the note contract. |
 | `references/voice-profile.md` | Your voice profile (a template until you build it). |
 | `references/voice-profile-bootstrap.md` | How the skill builds your voice from your real posts. |
+| `references/setup-wizard.md` | The guided, step-by-step first-time setup the skill runs for you. |
 | `references/apple-notes-sync.md` | The source-of-truth note: structure, analytics tracking, osascript mechanics. |
 | `references/tiktok-script-format.md` | The short, shootable TikTok script format. |
 | `references/linkedin-draft-via-browser.md` | Landing a LinkedIn draft via browser automation. |

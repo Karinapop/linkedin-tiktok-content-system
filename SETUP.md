@@ -4,6 +4,8 @@ The skill is built to sound like *you*, work from *your* note, and post to *your
 
 > **Total time: about 25 to 40 minutes.** See the prerequisites table in [README.md](README.md#before-you-start-everything-you-need-to-set-up) for the full list of software, extensions, logins, and macOS permissions.
 
+> **Shortcut: let Claude guide you.** Once the skill is installed, just say **"set up the content system"** and Claude runs the guided wizard ([references/setup-wizard.md](references/setup-wizard.md)): it checks each prerequisite, builds your voice profile, wires up your note, and ends with a dry run, one step at a time. The steps below are the same flow if you'd rather read along.
+
 ## 0. Prerequisites (~10 min, mostly logging in)
 
 Before the conversational steps, get the environment ready:
