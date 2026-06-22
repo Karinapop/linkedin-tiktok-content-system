@@ -37,7 +37,7 @@ The whole reason this skill exists: a raw idea ("AI is changing search") is not 
 
 ## First-time setup (do this once)
 
-This skill is built to sound like *you*, work from *your* content note, and post to *your* accounts. Before the first real run, walk through `references/setup.md` once to personalize three things:
+This skill is built to sound like *you*, work from *your* content note, and post to *your* accounts. Before the first real run, walk through [SETUP.md](SETUP.md) once to personalize three things:
 
 1. **Build your voice profile.** Connect your LinkedIn (browser) so the skill can read your recent original posts and generate `references/voice-profile.md` from how you actually write. This is what makes drafts sound like you instead of like "a LinkedIn thought leader." See `references/voice-profile-bootstrap.md`.
 2. **Point it at your content note.** Set your Apple Note ID in `references/apple-notes-sync.md` (the skill can help you find it). This note becomes the source of truth.
