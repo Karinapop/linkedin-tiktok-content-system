@@ -1,0 +1,12 @@
+# Working/output directory: your scraped data, note backups, drafts, analytics.
+# Personal — never commit.
+runs/
+
+# OS / editor cruft
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Temp files the note mechanics write
+/tmp/content_note.html

@@ -1,0 +1,29 @@
+{
+  "skill_name": "idea-to-linkedin-tiktok",
+  "evals": [
+    {
+      "id": 0,
+      "name": "single-idea-ai-reputation",
+      "prompt": "Bake this content idea into posts for me: most marketing teams are sleeping on the fact that their brand's reputation now lives inside AI models, not just on Google.",
+      "expected_output": "Two variants (live-trend + evergreen), each with a voice-matched LinkedIn post and a full TikTok production script. No em dashes, no LinkedIn hashtags, TikTok in friend-energy voice. Saved to a runs file; no browser landing in test.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 1,
+      "name": "batch-two-ideas-growth",
+      "prompt": "I have a couple content ideas, turn them into LinkedIn and TikTok content: 1) the best growth marketers are basically becoming part engineer now, 2) building in public is kind of overrated and nobody wants to say it.",
+      "expected_output": "Both ideas detected as a batch. For each idea, two variants x (LinkedIn + TikTok). Idea 2 should read as a genuine hot-take. Voice matches the user's voice profile; no em dashes; no LinkedIn hashtags; TikTok talks to a friend.",
+      "files": [],
+      "assertions": []
+    },
+    {
+      "id": 2,
+      "name": "single-idea-personal-reflection",
+      "prompt": "Make content out of this: lessons from my first 90 days at a hypergrowth startup.",
+      "expected_output": "Two variants, each LinkedIn + TikTok. Should lean into a personal-story hook and lessons-learned style per the voice profile. Evergreen variant especially personal. No em dashes, no LinkedIn hashtags, TikTok friend-energy.",
+      "files": [],
+      "assertions": []
+    }
+  ]
+}
