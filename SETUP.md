@@ -8,7 +8,7 @@ The skill is built to sound like *you*, work from *your* note, and post to *your
 
 Before the conversational steps, get the environment ready:
 
-1. **Install the Claude for Chrome extension** and open Chrome. In the extension, click **Connect** so Claude can drive the tab. (Each new session, you re-click Connect.)
+1. **Install the [Claude for Chrome extension](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn)** and open Chrome. In the extension, click **Connect** so Claude can drive the tab. (Each new session, you re-click Connect.)
 2. **Log into LinkedIn, TikTok, and X** in that same Chrome profile, and stay logged in. LinkedIn is required; TikTok and X are recommended/optional.
 3. **Approve macOS permissions when prompted.** The first time the skill touches Apple Notes, macOS asks to let it control "Notes" (System Settings → Privacy & Security → Automation) → click **Allow**. Approve Claude's in-session tool prompts (Bash, browser, web search) too, or set them to always-allow.
 

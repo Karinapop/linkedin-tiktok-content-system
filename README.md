@@ -33,7 +33,7 @@ This system drives **your** real accounts and a **local** Apple Note, so it need
 
 | Extension | Why | How |
 | --- | --- | --- |
-| **Claude for Chrome** extension | Lets Claude read your LinkedIn posts, scrape trends across LinkedIn/TikTok/X, and save LinkedIn drafts | Install it, then in each session you click **Connect** in the extension so Claude can drive that tab. The skill checks this with `list_connected_browsers` and will ask you to pair if it isn't connected. |
+| **Claude for Chrome** extension | Lets Claude read your LinkedIn posts, scrape trends across LinkedIn/TikTok/X, and save LinkedIn drafts | Install from the [Chrome Web Store](https://chromewebstore.google.com/detail/claude/fcoeoabgfenejglbffodgkkbkcdhcgfn), then in each session click **Connect** in the extension so Claude can drive that tab. The skill checks this with `list_connected_browsers` and will ask you to pair if it isn't connected. |
 
 There is **no Notes extension** to install. Apple Notes is native and is driven by AppleScript (osascript), which needs the macOS **Automation** permission below, not an extension.
 
