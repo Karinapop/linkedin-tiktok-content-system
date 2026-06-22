@@ -15,12 +15,53 @@ It is built around three things that make it actually useful instead of generic:
 
 It routes each idea to the right platform(s), keeps two independently-ranked priority lists, and refreshes a daily trends section from ~200 scraped posts across LinkedIn, X, and TikTok.
 
-## Requirements
+## Before you start: everything you need to set up
 
-- **Claude Code** (or another Claude client that supports skills).
-- **macOS** with **Apple Notes** (the source-of-truth note is local).
-- **Chrome** with the Claude in Chrome extension, logged into LinkedIn (and TikTok, optionally). Used to read your posts, scrape trends, and land LinkedIn drafts.
-- Optional: an X/grok integration for the social pulse, and a scheduled-task runner for the daily sync.
+This system drives **your** real accounts and a **local** Apple Note, so it needs you to be logged in everywhere, to install one browser extension, and to grant a couple of macOS permissions. Set all of this up once. Nothing here costs money beyond your normal Claude subscription.
+
+> **Total first-time setup: about 25 to 40 minutes.** After that, each content run is just a few minutes of reviewing drafts.
+
+### 1. Software (install these)
+
+| What | Why | Notes |
+| --- | --- | --- |
+| **Claude Code** (or a Claude client that supports skills) | Runs the skill itself | The skill is a folder Claude loads |
+| **macOS** | Apple Notes (the source-of-truth note) is a local, Mac-only app | This system does not work on Windows/Linux, because it reads/writes Apple Notes locally |
+| **Google Chrome** | All browser automation runs through Chrome | Use one Chrome profile for everything below |
+
+### 2. Browser extension (this is the key one)
+
+| Extension | Why | How |
+| --- | --- | --- |
+| **Claude for Chrome** extension | Lets Claude read your LinkedIn posts, scrape trends across LinkedIn/TikTok/X, and save LinkedIn drafts | Install it, then in each session you click **Connect** in the extension so Claude can drive that tab. The skill checks this with `list_connected_browsers` and will ask you to pair if it isn't connected. |
+
+There is **no Notes extension** to install. Apple Notes is native and is driven by AppleScript (osascript), which needs the macOS **Automation** permission below, not an extension.
+
+### 3. Accounts and logins (all in the SAME Chrome profile)
+
+Log into each of these in the Chrome where the extension is connected, and stay logged in:
+
+| Account | Required? | What it's used for |
+| --- | --- | --- |
+| **LinkedIn** | **Required** | Reading your posts to build your voice profile, scraping LinkedIn trends, tracking your published-post analytics, and saving your drafts |
+| **TikTok** | Recommended | Scraping TikTok trends and tracking your published TikToks. Skip it and TikTok trends fall back to web search (lower quality) |
+| **X (Twitter)** | Optional | The live-trend "social pulse." If you skip it, the skill uses web search and/or the grok integration instead |
+
+### 4. macOS permissions and approvals (grant these once)
+
+| Permission | Where | Why |
+| --- | --- | --- |
+| **Automation → Notes** | System Settings → Privacy & Security → Automation. macOS prompts you the first time the skill runs an AppleScript ("…wants to control Notes" → **Allow**) | So the skill can read and write your Content Ideas note |
+| **Claude tool permissions** | Claude prompts you in-session (Bash, the Chrome browser tools, web search) | Approve them, or set them to "always allow," so runs don't stop to ask each time |
+| **Chrome "Connect" click** | The Claude for Chrome extension, each session | Re-pairs the browser so Claude can act in your tab |
+| **Keep your Mac awake** (only for the optional daily auto-sync) | Energy settings / `caffeinate` | The scheduled morning run needs the Mac awake with Chrome paired |
+
+The core flow does **not** need Accessibility or Screen Recording permissions. Those are only relevant if you later automate GUI-only steps (e.g. dragging a file attachment into a note); this shared version leaves that out.
+
+### 5. Optional integrations
+
+- **grok / X MCP** for the social pulse. Optional; web search is the built-in fallback.
+- **A scheduled-task runner** if you want the daily "trends + note sync" to run automatically each morning.
 
 ## Install
 
@@ -32,13 +73,15 @@ It routes each idea to the right platform(s), keeps two independently-ranked pri
 2. Restart Claude / reload skills so it picks up the new skill.
 3. Run the one-time setup below.
 
-## First-time setup
+## First-time setup (~25 to 40 min)
 
 See **[SETUP.md](SETUP.md)** for the full walkthrough. In short:
 
-1. **Build your voice profile.** Ask Claude: *"build my voice profile from my LinkedIn."* It connects to your LinkedIn in Chrome, reads ~15 of your recent posts, and fills in `references/voice-profile.md`. (Or paste 8 to 12 of your own posts into chat.)
-2. **Create your Content Ideas note** in Apple Notes and tell Claude *"find my Content Ideas note ID"* to wire it up in `references/apple-notes-sync.md`.
-3. **Confirm your handles** (LinkedIn profile, optional TikTok handle).
+1. **Install + connect the Claude for Chrome extension and log into LinkedIn, TikTok, and X** in that Chrome profile (~10 min, mostly logging in).
+2. **Build your voice profile** (~5 to 10 min). Ask Claude: *"build my voice profile from my LinkedIn."* It connects to your LinkedIn in Chrome, reads ~15 of your recent posts, and fills in `references/voice-profile.md`. (Or paste 8 to 12 of your own posts into chat.)
+3. **Create your Content Ideas note** in Apple Notes and tell Claude *"find my Content Ideas note ID"* to wire it up in `references/apple-notes-sync.md` (~5 min). Approve the macOS Automation prompt for Notes when it appears.
+4. **Confirm your handles** (LinkedIn profile, optional TikTok handle) (~2 min).
+5. **Optional:** ask Claude to schedule the daily trends + note sync (~3 min).
 
 ## Use
 

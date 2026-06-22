@@ -1,8 +1,20 @@
 # One-time setup
 
-The skill is built to sound like *you*, work from *your* note, and post to *your* accounts. Do this once before your first real run. All of it is conversational: you ask Claude, it does the steps.
+The skill is built to sound like *you*, work from *your* note, and post to *your* accounts. Do this once before your first real run. Most of it is conversational: you ask Claude, it does the steps.
 
-## 1. Build your voice profile (most important)
+> **Total time: about 25 to 40 minutes.** See the prerequisites table in [README.md](README.md#before-you-start-everything-you-need-to-set-up) for the full list of software, extensions, logins, and macOS permissions.
+
+## 0. Prerequisites (~10 min, mostly logging in)
+
+Before the conversational steps, get the environment ready:
+
+1. **Install the Claude for Chrome extension** and open Chrome. In the extension, click **Connect** so Claude can drive the tab. (Each new session, you re-click Connect.)
+2. **Log into LinkedIn, TikTok, and X** in that same Chrome profile, and stay logged in. LinkedIn is required; TikTok and X are recommended/optional.
+3. **Approve macOS permissions when prompted.** The first time the skill touches Apple Notes, macOS asks to let it control "Notes" (System Settings → Privacy & Security → Automation) → click **Allow**. Approve Claude's in-session tool prompts (Bash, browser, web search) too, or set them to always-allow.
+
+There is no Notes extension to install. Apple Notes is native and driven by AppleScript; the Automation permission above is all it needs.
+
+## 1. Build your voice profile (most important, ~5 to 10 min)
 
 This is what makes drafts sound like you instead of like a generic LinkedIn post.
 
